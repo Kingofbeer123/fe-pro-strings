@@ -4,7 +4,12 @@
  * @param {string} string
  * @returns {string}
  */
-export const replaceZAndVFromString = (string) => {};
+export const replaceZAndVFromString = (string) => {
+    string.replace('z','*');
+    string.replace('v','*');
+    string.replace('Z','*');
+    string.replace('V','*');
+};
 
 /**
  * Функция должна принять 3 аргумента и все строки. Мы передаем строку,
