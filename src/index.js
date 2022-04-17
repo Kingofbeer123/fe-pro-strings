@@ -5,10 +5,26 @@
  * @returns {string}
  */
 export const replaceZAndVFromString = (string) => {
-    string.replace('z','*');
-    string.replace('v','*');
-    string.replace('Z','*');
-    string.replace('V','*');
+    string.toLowerCase();
+    let target = 'z';
+    let target2 = 'v';
+    let pos, pos2 = 0;
+    while (true) {
+    let foundPos = string.indexOf(target, pos);
+    if (foundPos == -1) break;
+    if (foundPos >=0) {
+        target = '*'
+    }
+    pos = foundPos + 1; 
+    }
+    while (true) {
+        let foundPos = string.indexOf(target2, pos2);
+        if (foundPos == -1) break;
+        if (foundPos >=0) {
+            target2 = '*'
+        }
+        pos = foundPos + 1; 
+    }
 };
 
 /**
@@ -21,7 +37,9 @@ export const replaceZAndVFromString = (string) => {
  * @param {string} newWord
  * @returns {string}
  */
-export const changeWord = (string, word, newWord) => {};
+export const changeWord = (string, word, newWord) => {
+
+};
 
 /**
  * Должна вернуть строку(1 аргумент) на обрезанную по длине(2 аргумент, число)
