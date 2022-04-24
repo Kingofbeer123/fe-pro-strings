@@ -28,9 +28,13 @@ export const replaceZAndVFromString = (string) => {
  * @returns {string}
  */
 export const changeWord = (string, word, newWord) => {
-   let position = string.indexOf(word);
-   let newString = string.slice(0, position) + newWord + string.slice(position, string.length);
-   return newString
+   let newString = string.slice(0, string.indexOf(word)) + newWord + string.slice(string.indexOf(word), string.length);
+   if (string.indexOf(word) === -1){
+       return string
+   }
+   else {
+    return newString
+   }
 };
 
 /**
@@ -54,7 +58,15 @@ export const truncate = (string, length) => {
  * @param {string} symbol
  * @returns {number}
  */
-export const quantityOfSymbols = (string, symbol) => {};
+export const quantityOfSymbols = (string, symbol) => {
+    let quantity = 0;
+    for (let i=0; i<string.length; i++) {
+        if (string[i].toLowerCase() === symbol.toLowerCase()) {
+            quantity++;
+        }
+    }
+    return quantity;
+};
 
 /**
  * Принимает строку в первом аргументе, и символ во втором
@@ -71,4 +83,17 @@ export const quantityOfSymbols = (string, symbol) => {};
  * @param {string} symbol
  * @returns {number}
  */
-export const quantityOfSymbolsWithIndexOf = (string, symbol) => {};
+export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
+    let quantity = 0;
+    let position = 0;
+    while(true) {
+        if (string.toLowerCase.indexOf(symbol, position) === -1){
+            break;
+        }
+        else {
+            string.toLowerCase.indexOf(symbol, position) += 1;
+            quantity += 1;
+        }
+    }
+    return quantity;
+};
