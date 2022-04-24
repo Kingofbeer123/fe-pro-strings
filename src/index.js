@@ -87,13 +87,9 @@ export const quantityOfSymbolsWithIndexOf = (string, symbol) => {
     let quantity = 0;
     let position = 0;
     while(true) {
-        if (string.toLowerCase.indexOf(symbol, position) === -1){
-            break;
-        }
-        else {
-            string.toLowerCase.indexOf(symbol, position) += 1;
-            quantity += 1;
-        }
+        if (string.toLowerCase.indexOf(symbol, position) === -1) break;
+        string.toLowerCase.indexOf(symbol, position) += 1;
+        quantity += 1;
     }
     return quantity;
 };
