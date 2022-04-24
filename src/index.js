@@ -17,7 +17,7 @@ export const replaceZAndVFromString = (string) => {
             newString = newString + string[i]
         }
     }
-    return String;
+    return newString;
 };
 
 /**
