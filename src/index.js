@@ -5,26 +5,19 @@
  * @returns {string}
  */
 export const replaceZAndVFromString = (string) => {
-    string.toLowerCase();
-    let target = 'z';
-    let target2 = 'v';
-    let pos, pos2 = 0;
-    while (true) {
-    let foundPos = string.indexOf(target, pos);
-    if (foundPos == -1) break;
-    if (foundPos >=0) {
-        target = '*'
-    }
-    pos = foundPos + 1; 
-    }
-    while (true) {
-        let foundPos = string.indexOf(target2, pos2);
-        if (foundPos == -1) break;
-        if (foundPos >=0) {
-            target2 = '*'
+    let newString = '';
+    for (let i = 0; i < string.length; i++) {
+        if (String[i].toLowercase() === 'z') {
+            newString[i] === newString[i] + '*';
         }
-        pos = foundPos + 1; 
+        if (string[i].toLowerCase() === 'v') {
+            newString[i] === newString[i] + '*';
+        }
+        else {
+            newString = newString + string[i]
+        }
     }
+    return String;
 };
 
 /**
@@ -38,6 +31,7 @@ export const replaceZAndVFromString = (string) => {
  * @returns {string}
  */
 export const changeWord = (string, word, newWord) => {
+    let a = string.indexOf(word);
 
 };
 
