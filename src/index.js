@@ -7,11 +7,11 @@
 export const replaceZAndVFromString = (string) => {
     let newString = '';
     for (let i = 0; i < string.length; i++) {
-        if (String[i].toLowercase() === 'z') {
-            newString[i] === newString[i] + '*';
+        if (string[i].toLowerCase() === 'z') {
+            newString = newString + '*';
         }
         if (string[i].toLowerCase() === 'v') {
-            newString[i] === newString[i] + '*';
+            newString = newString + '*';
         }
         else {
             newString = newString + string[i]
